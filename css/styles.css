@@ -17,11 +17,6 @@ body {
     margin: 0 auto;
 }
 
-.header {
-    
-    /* border: 1px solid red; */
-}
-
 nav {
     display: flex;
     justify-content: space-between;
@@ -84,30 +79,12 @@ li.list-item {
 /* section services */
 
 .services {
-    padding: 75px 0;
-    /* border: 1px solid blue; */
+    padding: 75px 0 60px 0;
 }
 
 .section-heading {
     color: #333333;
     text-align: center;
-}
-
-.section-heading::after {
-    content: '';
-    display: block;
-    width: 60px;
-    height: 3px;
-    background-color: #f38181;
-    margin: auto;
-    margin-top: 35px;
-    margin-bottom: 30px;
-}
-
-h2.section-subtitle {
-    font-family: "Kaushan Script";
-    font-size: 24px;
-    font-weight: 400;
 }
 
 h2.section-title {
@@ -116,6 +93,31 @@ h2.section-title {
     font-size: 30px;
     font-weight: 700;
     text-transform: uppercase;
+    text-align: center;
+}
+
+span.section-subtitle {
+    display: block;
+    font-family: "Kaushan Script";
+    font-size: 24px;
+    font-weight: 400;
+    text-transform: lowercase;
+    margin-bottom: 8px;
+}
+
+span.section-subtitle::first-letter {
+    text-transform: uppercase;
+}
+
+h2.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #f38181;
+    margin: auto;
+    margin-top: 35px;
+    margin-bottom: 30px;
 }
 
 .features {
@@ -128,7 +130,14 @@ h2.section-title {
     width: 330px;
     display: flex;
     padding: 30px 0;
-    margin-bottom: 40px;
+    margin-bottom: 35px;
+}
+
+.feature:nth-child(4),
+.feature:nth-child(5),
+.feature:nth-child(6) 
+{
+    margin-bottom: 0;
 }
 
 .feature-icon {
@@ -144,7 +153,6 @@ h2.section-title {
 .feature-icon-first::before {
     content: '';
     background: url('../img/alarm.png') no-repeat;
-    
 }
 
 .feature-icon-second::before {
@@ -178,7 +186,7 @@ h2.section-title {
     font-size: 14px;
     font-weight: 400;
     text-transform: uppercase;
-    margin-bottom: 20px;
+    margin-bottom: 12px;
 }
 
 .feature-text {
@@ -190,18 +198,13 @@ h2.section-title {
 
 /* section team */
 
-.team {
-    padding: 75px 0;
-    /* border: 2px solid green; */
-}
-
 p.team-desc {
     width: 941px;
     color: #999999;
     font-family: Roboto;
     font-size: 15px;
     font-weight: 400;
-    line-height: 24px;
+    line-height: 30px;
     margin: auto;
     text-align: center;
 }
@@ -210,7 +213,6 @@ p.team-desc {
     display: flex;
     justify-content: space-between;
     padding: 90px 0;
-    /* border: 2px solid orange; */
 }
 
 .team-member {
@@ -218,24 +220,29 @@ p.team-desc {
     width: 380px;
 }
 
-/* .team-member:hover::before {
+.team-member:hover::before {
     content: '';
     display: block;
     width: 100%;
-    height: 100%;
+    height: 470px;
     background-color: #95e1d3;
-} */
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.9;
+    transition: linear 0.2s;
+}
 
 .member-overlay {
     display: block;
     position: absolute;
     width: 100%;
-    height: 84%;
+    height: 470px;
     background-image: linear-gradient(to bottom, #ed898a, #edd687);
     top: 0;
     left: 0;
     opacity: 0;
-    transform: translate(-10px, -10px);
+    transform: translate(-12px, -12px);
 }
 
 .member-overlay:hover {
@@ -301,7 +308,7 @@ a.social-link-instagram::before {
     font-size: 14px;
     font-weight: 400;
     text-transform: uppercase;
-    margin-bottom: 15px;
+    margin-bottom: 7px;
 }
 
 .team-position {

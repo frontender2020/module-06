@@ -68,12 +68,12 @@ li.list-item {
 
 .list-item a:hover {
     color: #f38181;
-    transition: 0.2s;
+    transition: all .2s linear;
 }
 
 .list-item a:hover::after {
     opacity: 1;
-    transition: 0.2s;
+    transition: all 0.2s linear;
 }
 
 /* section services */
@@ -123,7 +123,7 @@ h2.section-title::after {
 .features {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .feature {
@@ -218,44 +218,51 @@ p.team-desc {
 .team-member {
     position: relative;
     width: 380px;
+    box-shadow: 12px 12px 0 transparent;
+    transition: all 0.2s linear;
 }
 
-.team-member:hover::before {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 470px;
-    background-color: #95e1d3;
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0.9;
-    transition: linear 0.2s;
+img.member-image:hover {
+    box-shadow: 12px 12px 0 #95e1d3;
+    transform: translate(-10px, -10px);
+    transition: all 0.2s linear;
 }
 
 .member-overlay {
     display: block;
     position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 470px;
+}
+
+.member-overlay:hover {
     background-image: linear-gradient(to bottom, #ed898a, #edd687);
     top: 0;
     left: 0;
     opacity: 0;
     transform: translate(-12px, -12px);
-}
-
-.member-overlay:hover {
+    box-shadow: 12px 12px 0 #95e1d3;
     opacity: 0.9;
-    transition: all 0.2s ease;
+    transition: all 0.2s linear;
 }
 
 .social-links {
+    display: none;
+    transition: all 0.2s linear;
+}
+
+.member-overlay:hover .social-links {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: flex;
     width: 224px;
     height: 56px;
-    margin: auto;
-    margin-top: 50%;
+    transition: all 0.2s linear;
 }
 
 a.social-link {
@@ -267,7 +274,7 @@ a.social-link {
 
 a.social-link:hover {
     background-color: #95e1d3;
-    transition: linear 0.2s;
+    transition: all 0.2s linear;
 }
 
 a.social-link::before {

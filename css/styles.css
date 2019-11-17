@@ -214,14 +214,14 @@ p.team-desc {
     transition: all 0.2s linear;
 }
 
-.member-image-wrapper {
+/* .member-image-wrapper {
     transition: all 0.2s linear;
 }
 
 .member-image-wrapper:hover {
     transform: translate(-10px, -10px);
     transition: all 0.2s linear;
-}
+} */
 
 img.member-image:hover {
     box-shadow: 12px 12px 0 #95e1d3;

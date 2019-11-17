@@ -140,43 +140,35 @@ h2.section-title::after {
     margin-bottom: 0;
 }
 
-.feature-icon {
+.feature::before {
+    content: '';
+    display: block;
+    width: 64px;
+    height: 34px;
     margin-right: 25px;
 }
 
-.feature-icon::before {
-    display: block;
-    width: 32px;
-    height: 31px;
-}
-
-.feature-icon-first::before {
-    content: '';
+.feature:first-child::before {
     background: url('../img/alarm.png') no-repeat;
 }
 
-.feature-icon-second::before {
-    content: '';
+.feature:nth-child(2)::before {
     background: url('../img/line.png') no-repeat;
 }
 
-.feature-icon-third::before {
-    content: '';
+.feature:nth-child(3)::before {
     background: url('../img/computer.png') no-repeat;
 }
 
-.feature-icon-forth::before {
-    content: '';
+.feature:nth-child(4)::before {
     background: url('../img/book.png') no-repeat;
 }
 
-.feature-icon-fifth::before {
-    content: '';
+.feature:nth-child(5)::before {
     background: url('../img/home.png') no-repeat;
 }
 
-.feature-icon-sixth::before {
-    content: '';
+.feature:last-child::before {
     background: url('../img/image.png') no-repeat;
 }
 
@@ -219,6 +211,15 @@ p.team-desc {
     position: relative;
     width: 380px;
     box-shadow: 12px 12px 0 transparent;
+    transition: all 0.2s linear;
+}
+
+.member-image-wrapper {
+    transition: all 0.2s linear;
+}
+
+.member-image-wrapper:hover {
+    transform: translate(-10px, -10px);
     transition: all 0.2s linear;
 }
 

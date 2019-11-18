@@ -224,9 +224,11 @@ p.team-desc {
 } */
 
 img.member-image:hover {
+    position: absolute;
     box-shadow: 12px 12px 0 #95e1d3;
     transform: translate(-10px, -10px);
     transition: all 0.2s linear;
+    z-index: 9999;
 }
 
 .member-overlay {
